@@ -3,10 +3,12 @@
 // import NetflixSeries from './components/NetflixSeries';
 // import Profile from './components/ProfileCard/Profile';
 // import './components/Netflix.css';
+import DerivedState from './components/hooks/DerivedState';
 import './components/Netflix.module.css';
 // import {EventHandling} from './components/EventHandling';
 // import {EventProps} from './components/EventProps';
-import EventPropagation from './components/EventPropagation';
+// import EventPropagation from './components/EventPropagation';
+// import State, {SiblingComponent} from './components/hooks/State';
 
 function App() {
     return (
@@ -16,7 +18,10 @@ function App() {
             {/* <Profile /> */}
             {/* <EventHandling /> */}
             {/* <EventProps /> */}
-            <EventPropagation />
+            {/* <EventPropagation /> */}
+            {/* <State /> */}
+            <DerivedState />
+            {/* <SiblingComponent /> */}
         </section>
     );
 }
