@@ -1,10 +1,14 @@
 // import './App.css';
 
+import {Todo} from './projects/Todo/Todo';
+
 // import NetflixSeries from './components/NetflixSeries';
 // import Profile from './components/ProfileCard/Profile';
 // import './components/Netflix.css';
-import DerivedState from './components/hooks/DerivedState';
-import './components/Netflix.module.css';
+// import DerivedState from './components/hooks/DerivedState';
+// import LifStateUp from './components/LifStateUp';
+// import './components/Netflix.module.css';
+// import ToggelSwitch from './projects/ToggleSwitch/ToggelSwitch';
 // import {EventHandling} from './components/EventHandling';
 // import {EventProps} from './components/EventProps';
 // import EventPropagation from './components/EventPropagation';
@@ -20,8 +24,12 @@ function App() {
             {/* <EventProps /> */}
             {/* <EventPropagation /> */}
             {/* <State /> */}
-            <DerivedState />
+            {/* <DerivedState /> */}
             {/* <SiblingComponent /> */}
+
+            {/* <LifStateUp /> */}
+            {/* <ToggelSwitch /> */}
+            <Todo />
         </section>
     );
 }
