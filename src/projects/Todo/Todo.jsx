@@ -1,64 +1,74 @@
 import {useState} from 'react';
 import './Todo.css';
-import {MdCheck, MdDeleteForever} from 'react-icons/md';
+import TodoForm from './TodoForm';
+import {TodoList} from './TodoList';
+import {TodaoDate} from './TodoDate';
 
 export const Todo = () => {
-    const [inputValue, setInputValue] = useState('');
     const [task, setTask] = useState([]);
 
-    const handleInputChange = (value) => {
-        setInputValue(value);
+    const handleDeleteTodo = (value) => {
+        const updatedTask = task.filter((curTask) => curTask.content !== value);
+        setTask(updatedTask);
     };
 
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        if (!inputValue) return;
-        if (task.includes(inputValue)) {
-            setInputValue('');
-            return;
-        }
-        setTask((prevTask) => [...prevTask, inputValue]);
-        setInputValue('');
+    const handleClearTodoData = () => {
+        // setInputValue('');
+        setTask([]);
     };
+
+    const handleFormSubmit = (inputValue) => {
+        const {id, content, checked} = inputValue;
+        // to check if the input field is empaty or not
+        if (!content) return;
+        // to check if the data is already existing or not
+        // if (task.includes(inputValue)) return;
+        const ifTodoContentMatched = task.find(
+            (curTask) => curTask.content === content
+        );
+        if (ifTodoContentMatched) return;
+
+        setTask((prevTask) => [...prevTask, {id, content, checked}]);
+    };
+
+    //todo Date and time
+
+    //todo handleCheckedTodo functionality
+    const handleCheckedTodo = (content) => {
+        const updatedTask = task.map((curTask) => {
+            if (curTask.content === content) {
+                return {...curTask, checked: !curTask.checked};
+            } else {
+                return curTask;
+            }
+        });
+        setTask(updatedTask);
+    };
+
     return (
         <section className="todo-container">
             <header>
                 <h1>Todo List</h1>
+                <TodaoDate />
             </header>
-            <section className="form">
-                <form onSubmit={handleFormSubmit}>
-                    <div>
-                        <input
-                            type="text"
-                            className="todo-input"
-                            autoComplete="off"
-                            value={inputValue}
-                            onChange={(e) => handleInputChange(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <button type="submit" className="todo-btn">
-                            Add Task
-                        </button>
-                    </div>
-                </form>
-            </section>
+            <TodoForm onAddTodo={handleFormSubmit} />
             <section className="myUnOrdeList">
                 <ul>
-                    {task.map((curTask, index) => {
+                    {task.map((curTask) => {
                         return (
-                            <li key={index} className="todo-item">
-                                <span>{curTask}</span>
-                                <button className="check-btn">
-                                    <MdCheck />
-                                </button>
-                                <button className="delete-btn">
-                                    <MdDeleteForever />
-                                </button>
-                            </li>
+                            <TodoList
+                                key={curTask.id}
+                                data={curTask.content}
+                                checked={curTask.checked}
+                                onHandleDeleteTodo={handleDeleteTodo}
+                                onHandleCheckedTodo={handleCheckedTodo}
+                            />
                         );
                     })}
                 </ul>
+            </section>
+            <section className="clear-btn" onClick={handleClearTodoData}>
+                Clear All
             </section>
         </section>
     );
