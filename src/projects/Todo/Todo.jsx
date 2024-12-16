@@ -3,9 +3,12 @@ import './Todo.css';
 import TodoForm from './TodoForm';
 import {TodoList} from './TodoList';
 import {TodaoDate} from './TodoDate';
+import { getLocalStorageTodoData, setToLocalStorageTodoData } from './TodoLocalStorage';
+
+
 
 export const Todo = () => {
-    const [task, setTask] = useState([]);
+    const [task, setTask] = useState(() => getLocalStorageTodoData());
 
     const handleDeleteTodo = (value) => {
         const updatedTask = task.filter((curTask) => curTask.content !== value);
@@ -31,6 +34,8 @@ export const Todo = () => {
         setTask((prevTask) => [...prevTask, {id, content, checked}]);
     };
 
+    // add data t localStorage
+    setToLocalStorageTodoData(task);
     //todo Date and time
 
     //todo handleCheckedTodo functionality
