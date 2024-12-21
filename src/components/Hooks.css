@@ -1,0 +1,29 @@
+.container {
+    padding-top: 10px;
+}
+.short-container {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3.2rem;
+    display: grid;
+}
+p {
+    font-size: 20px;
+    color: #333;
+    margin: 20px;
+    width: 21rem;
+    float: left !important;
+}
+button {
+    padding: 1rem 0;
+    cursor: pointer;
+    font-size: large;
+    background-color: rgb(4, 4, 4);
+    color: #fff;
+}
+.grid-three-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 3.9rem;
+}

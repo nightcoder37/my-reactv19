@@ -1,6 +1,7 @@
 // import './App.css';
 
-import {Todo} from './projects/Todo/Todo';
+// import ShortCircuit from './components/ShortCircuit';
+// import {Todo} from './projects/Todo/Todo';
 
 // import NetflixSeries from './components/NetflixSeries';
 // import Profile from './components/ProfileCard/Profile';
@@ -29,7 +30,8 @@ function App() {
 
             {/* <LifStateUp /> */}
             {/* <ToggelSwitch /> */}
-            <Todo />
+            {/* <Todo /> */}
+            {/* <ShortCircuit /> */}
         </section>
     );
 }
