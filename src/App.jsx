@@ -1,5 +1,7 @@
 // import './App.css';
 
+import {Counter} from './components/hooks/useState';
+
 // import ShortCircuit from './components/ShortCircuit';
 // import {Todo} from './projects/Todo/Todo';
 
@@ -14,7 +16,6 @@
 // import {EventProps} from './components/EventProps';
 // import EventPropagation from './components/EventPropagation';
 // import State, {SiblingComponent} from './components/hooks/State';
-import index from '../src/components/hooks/useState/index';
 
 function App() {
     return (
@@ -33,7 +34,7 @@ function App() {
             {/* <ToggelSwitch /> */}
             {/* <Todo /> */}
             {/* <ShortCircuit /> */}
-            <index />
+            <Counter />
         </section>
     );
 }
