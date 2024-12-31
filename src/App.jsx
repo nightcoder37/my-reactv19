@@ -1,6 +1,10 @@
 // import './App.css';
 
-import {Counter} from './components/hooks/useState';
+// import {Counter} from './components/hooks/useState';
+// import {RegistrationForm} from './components/hooks/useState/Registration';
+import ContactForm from './components/hooks/useState/ContactForm';
+// import LoginForm from './components/hooks/useState/LoginForm';
+// import {RegistrationFormReact} from './components/hooks/useState/RegistrationReact';
 
 // import ShortCircuit from './components/ShortCircuit';
 // import {Todo} from './projects/Todo/Todo';
@@ -34,7 +38,11 @@ function App() {
             {/* <ToggelSwitch /> */}
             {/* <Todo /> */}
             {/* <ShortCircuit /> */}
-            <Counter />
+            {/* <Counter /> */}
+            {/* <RegistrationForm /> */}
+            {/* <RegistrationFormReact /> */}
+            {/* <LoginForm /> */}
+            <ContactForm />
         </section>
     );
 }
