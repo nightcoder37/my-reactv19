@@ -2,7 +2,8 @@
 
 // import {Counter} from './components/hooks/useState';
 // import {RegistrationForm} from './components/hooks/useState/Registration';
-import ContactForm from './components/hooks/useState/ContactForm';
+import {ReactUseEffect} from './components/hooks/useEffect';
+// import ContactForm from './components/hooks/useState/ContactForm';
 // import LoginForm from './components/hooks/useState/LoginForm';
 // import {RegistrationFormReact} from './components/hooks/useState/RegistrationReact';
 
@@ -23,7 +24,7 @@ import ContactForm from './components/hooks/useState/ContactForm';
 
 function App() {
     return (
-        <section className="container">
+        <section>
             {/* <h1 className="card-heading">List of Best Netflix Series</h1> */}
             {/* <NetflixSeries /> */}
             {/* <Profile /> */}
@@ -42,7 +43,8 @@ function App() {
             {/* <RegistrationForm /> */}
             {/* <RegistrationFormReact /> */}
             {/* <LoginForm /> */}
-            <ContactForm />
+            {/* <ContactForm /> */}
+            <ReactUseEffect />
         </section>
     );
 }
