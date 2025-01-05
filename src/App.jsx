@@ -2,7 +2,8 @@
 
 // import {Counter} from './components/hooks/useState';
 // import {RegistrationForm} from './components/hooks/useState/Registration';
-import {ReactUseEffect} from './components/hooks/useEffect';
+// import {ReactUseEffect} from './components/hooks/useEffect';
+import {Challenge} from './components/hooks/useEffect/EffectChallenge';
 // import ContactForm from './components/hooks/useState/ContactForm';
 // import LoginForm from './components/hooks/useState/LoginForm';
 // import {RegistrationFormReact} from './components/hooks/useState/RegistrationReact';
@@ -44,7 +45,8 @@ function App() {
             {/* <RegistrationFormReact /> */}
             {/* <LoginForm /> */}
             {/* <ContactForm /> */}
-            <ReactUseEffect />
+            {/* <ReactUseEffect /> */}
+            <Challenge />
         </section>
     );
 }
